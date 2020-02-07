@@ -1,5 +1,5 @@
 <?php 
-include 'scripts/master_query.php';
+//include 'scripts/master_query.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,14 +13,23 @@ include 'scripts/master_query.php';
 </head>
 <body>
 	
-	<nav class="navbar navbar-light bg-faded">
-		<a class="navbar-brand" href="index.php">Budgetry</a>
-		<ul class="nav navbar-nav">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			
-		</ul>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Home <span class="sr-only">Budgetry</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#">Disabled</a>
+		      </li>
+		    </ul>
+		    
+		  </div>
 	</nav>
 
 	<div class="form-top">
@@ -43,7 +52,10 @@ include 'scripts/master_query.php';
 
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
-
+	
+	<footer>
+		<p>Made By John Kimani &copy; <script>let current = new Date; document.write(current.getFullYear());</script></p>
+	</footer>
 	<script src="js/.jquery_3.4.1.js" type="text/javascript"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/all.js" type="text/javascript"></script>
