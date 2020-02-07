@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+div.form-top {
+	background: rgba(230, 0, 0, 0.9);
+	color: #fff;
+	margin: 10px auto 0px;
+	border: 1px solid #ccc;
+	border-radius: 5px 10px;
+	width: 60%;
+	text-align: center;
+}
+div.form-top h3{
+	text-transform: uppercase;
+	font-weight: bolder;
+	padding: 10px;
+}
+form.budget {
+	margin: 0px auto;
+	border: 1px solid #ccc;
+	border-radius: 5px 10px;
+	width: 60%;
+	text-align: center;
+	padding: 20px;
+}

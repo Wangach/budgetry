@@ -1,3 +1,6 @@
+<?php 
+include 'scripts/master_query.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +14,12 @@
 <body>
 	
 	<nav class="navbar navbar-light bg-faded">
-		<a class="navbar-brand" href="#">{4:Navbar}</a>
+		<a class="navbar-brand" href="index.php">Budgetry</a>
 		<ul class="nav navbar-nav">
 			<li class="nav-item active">
 				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Home</a>
-			</li>
+			
 		</ul>
 	</nav>
 
@@ -43,8 +38,10 @@
 		</div>
 		<div class="form-group">
 			<label for="amount"> Amount:</label>
-			input.form-control
+			<input class="form-control" type="number" placeholder="Enter Amount..." name="kiwango">
 		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 
 	<script src="js/.jquery_3.4.1.js" type="text/javascript"></script>
