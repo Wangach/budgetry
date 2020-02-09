@@ -1,5 +1,5 @@
 <?php 
-//include 'scripts/master_query.php';
+include 'scripts/master_query.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
 <body>
 	
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		  <a class="navbar-brand" href="#">Navbar</a>
+		  <a class="navbar-brand" href="#">My Budget</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -36,21 +36,25 @@
 		<h3>Budgetry</h3>
 		<p>Please Fill In All Fields</p>
 	</div>
-	<form action="#" method="POST" class="budget">
+	<form action="index.php" method="POST" class="budget">
 		<div class="form-group">
 			<label for="Type">Type: </label>
 			<select name="direct" id="direction" class="form-control">
 				<option value=""></option>
-				<option value="earning" id="">Credit</option>
-				<option value="spending" id="">Debit</option>
+				<option value="earning" id="cr">Credit</option>
+				<option value="spending" id="db">Debit</option>
 			</select>
+		</div>
+		<div class="form-group">
+			<label for="desc"> Description:</label>
+			<input class="form-control" type="text" placeholder="Describe Expenditure..." name="maelezo">
 		</div>
 		<div class="form-group">
 			<label for="amount"> Amount:</label>
 			<input class="form-control" type="number" placeholder="Enter Amount..." name="kiwango">
 		</div>
 
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-primary" name="register">Submit</button>
 	</form>
 	
 	<footer>

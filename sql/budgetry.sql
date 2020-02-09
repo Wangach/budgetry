@@ -1,0 +1,2 @@
+/*THis Is The SQL Query for ccreating the database*/
+CREATE TABLE `budget`.`cash` ( `id` INT NOT NULL AUTO_INCREMENT , `description` VARCHAR(200) NOT NULL , `credit` INT NOT NULL , `debit` INT NOT NULL , `amount` INT NOT NULL , `cashid` VARCHAR(200) NOT NULL , `trans_tym` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
