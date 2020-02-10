@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
 	switch ($aina) {
 		case 'earning':
 			//Using the values gotten from the query above
-			$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES()"
+			$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES()";
 			break;
 			case 'spending':
 			
