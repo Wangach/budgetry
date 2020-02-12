@@ -35,3 +35,50 @@ footer {
 	position: sticky;
 	margin-top: 120px;
 }
+div.cashathand {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: #f0a117;
+	margin: 10px auto 0px;
+}
+div.cashmade {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: #0fe04b;
+	margin: 10px auto 0px;
+}
+div.cashspent {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: #e01c0f;
+	margin: 10px auto 0px;
+}
+div.profitmade {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: #0a88eb;
+	margin: 30px auto 0px;
+}
+#cat, #cmd, #csp, #pmd {
+	text-align: center;
+}
+#cat > h6{
+	font-weight: bolder;
+	color: green;
+}
+#cmd > h6{
+	font-weight: bolder;
+	color: blue;
+}
+#csp > h6{
+	font-weight: bolder;
+	color: red;
+}
+#pmd > h6{
+	font-weight: bolder;
+	color: cyan;
+}
