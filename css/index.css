@@ -61,7 +61,7 @@ div.profitmade {
 	width: 50px;
 	border-radius: 100%;
 	background: #0a88eb;
-	margin: 30px auto 0px;
+	margin: 10px auto 0px;
 }
 #cat, #cmd, #csp, #pmd {
 	text-align: center;
@@ -81,4 +81,11 @@ div.profitmade {
 #pmd > h6{
 	font-weight: bolder;
 	color: cyan;
+}
+
+
+
+/*Media Queries*/
+@media (min-width: 320px) and (max-width: 480px) {
+	
 }

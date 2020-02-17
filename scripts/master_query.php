@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
 				$holder = $holder.$genVal;
 			}
 			//Using the values gotten from the query above
-			$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES('', '$descr', '$moneyIn', '$moneyOut', '$totals', '$holder')";
+			$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES('', '$descr', '$moneyOut', '$moneyIn', '$totals', '$holder')";
 			$confirmation = mysqli_query($dbcon, $earnQuery);
 			if ($confirmation) {
 				$output = "<script";
@@ -58,7 +58,7 @@ if (isset($_POST['register'])) {
 					$holder = $holder.$genVal;
 				}
 				//Using the values gotten from the query above
-				$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES('', '$descr', '$moneyIn', '$moneyOut', '$totals', '$holder')";
+				$earnQuery = "INSERT INTO cash(id, description, credit, debit, amount, cashid) VALUES('', '$descr', '$moneyOut', '$moneyIn', '$totals', '$holder')";
 				$confirmation = mysqli_query($dbcon, $earnQuery);
 				if ($confirmation) {
 					$output = "<script";
@@ -92,7 +92,7 @@ function getCashAtHand()
 			echo "KES ".$value;
 		}
 	}else{
-		echo "No Record Found!";
+		echo "KES ". 0;
 	}
 }
 
@@ -100,7 +100,7 @@ function getCashAtHand()
 function getCashMade()
 {	include 'db.php';
 	$todaysDates = date('Y-m-d');
-	$getData = "SELECT SUM(credit) AS earnings FROM `cash` WHERE trans_tym LIKE '$todaysDates%' AND description NOT LIKE '%cash at hand%'";
+	$getData = "SELECT SUM(debit) AS earnings FROM `cash` WHERE trans_tym LIKE '$todaysDates%' AND description NOT LIKE '%cash at hand%'";
 	$specify = mysqli_query($dbcon, $getData);
 	if (mysqli_num_rows($specify) > 0) {
 		while ($row = mysqli_fetch_assoc($specify)) {
@@ -109,14 +109,14 @@ function getCashMade()
 			echo "KES ".$value;
 		}
 	}else{
-		echo "No Record Found!";
+		echo "KES ". 0;
 	}
 }
 //Get Cash Spent
 function getCashSpent()
 {	include 'db.php';
 	$todaysDates = date('Y-m-d');
-	$getData = "SELECT SUM(debit) AS spendings FROM `cash` WHERE trans_tym LIKE '$todaysDates%' AND description NOT LIKE '%cash at hand%'";
+	$getData = "SELECT SUM(credit) AS spendings FROM `cash` WHERE trans_tym LIKE '$todaysDates%' AND description NOT LIKE '%cash at hand%'";
 	$specify = mysqli_query($dbcon, $getData);
 	if (mysqli_num_rows($specify) > 0) {
 		while ($row = mysqli_fetch_assoc($specify)) {
@@ -125,7 +125,7 @@ function getCashSpent()
 			echo "KES ".$value;
 		}
 	}else{
-		echo "No Record Found!";
+		echo "KES ". 0;
 	}
 }
 //Get Profit
@@ -141,7 +141,7 @@ function getProfit()
 			echo "KES ".$value;
 		}
 	}else{
-		echo "No Record Found!";
+		echo "KES ". 0;
 	}
 }
  ?>
